@@ -61,7 +61,8 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:~/fabric-samples/bin
 1. 패브릭 설치시 fabric-samples도 설치가 된다. 
 2. cd fabric-samples에 있는 fabcar 폴더로 이동하고, 이 곳에서 startFablic.sh를 실행한다.
   ``` cmd
-  cd fablic-samples
+  cd fablic-samples/fabcar
+  ./startFablic.sh
   ```
 3. 자바스크립트 폴더로 이동해서 기존에 설치 되어있던 wallet 폴더를 삭제하고, package.json 설치를 진행한다.
 ``` cmd
