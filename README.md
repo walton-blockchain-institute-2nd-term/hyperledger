@@ -6,6 +6,8 @@
 - https://drive.google.com/drive/folders/12ilNZ9CTT5ZoHNMWYJY1rhiCxFqWEopi?usp=sharing
 
 # 하이퍼레저 실습 내용 정리
+## 강사님 자료 링크 ( 이건 실습 자료니까 가져가서 사용하셔도 됩니다. )
+- https://drive.google.com/open?id=1NSjD7hxcKRbE7PWKXBKoFSivB6CP5a94
 
 ## ubuntu 16.04 LTS 로 설치
 ``` cmd
