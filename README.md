@@ -4,3 +4,79 @@
 ### 해당 자료에 대한 무단 배포를 금합니다 ㅎㅎ 본인만 사용하시고 주변 사람들에게 전파는 절대 금합니다.
 ### 법적 제제들어오시면 .. ㅎ
 - https://drive.google.com/drive/folders/12ilNZ9CTT5ZoHNMWYJY1rhiCxFqWEopi?usp=sharing
+
+# 하이퍼레저 실습 내용 정리
+
+## ubuntu 16.04 LTS 로 설치
+``` cmd
+// docker 설치
+sudo apt install docker.io
+sudo apt install docker-compose
+sudo apt install software-propertise-common
+// 사용자 권한 주기
+sudo usermod -aG docker $USER
+// reboot
+rebooting
+```
+
+## Crul , Node.js , Go 설치
+``` cmd
+// curl 설치
+sudo apt-get install curl
+// 패키지 매니저 업데이트
+sudo apt-get update
+sudo apt-get install build-essential libssl-dev
+// nvm 설치
+curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+bash install_nvm.sh
+source ~/.profile
+nvm install v8.11.1
+// Go 설치
+curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd54.tar.gz
+tar -xvf go1.11.2.linux-amd64.tar.gz
+sudo mv go /usr/local
+sudo ln -s /usr/local/go/bin/go /usr/local/bin/go
+gedit ~/.profile
+// 제일 밑에 추가하는부분
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+source ~/.profile
+```
+## 파이썬, GIT 설치( 설치가 안되어 있는 경우에만 해당 )
+sudo apt install -y python
+sudo apt install -y git
+
+## 하이퍼렛저 패브릭 설치
+```cmd
+sudo curl -sSL http://bit.ly/2ysbOFE | bash -s
+vi ~/.profile
+source ~/.profile
+아까 추가한 부분
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:~/fabric-samples/bin
+```
+
+# 하이퍼렛저 패브릭 fabcar 실행 명령 순서
+1. 패브릭 설치시 fabric-samples도 설치가 된다. 
+2. cd fabric-samples에 있는 fabcar 폴더로 이동하고, 이 곳에서 startFablic.sh를 실행한다.
+  ``` cmd
+  cd fablic-samples
+  ```
+3. 자바스크립트 폴더로 이동해서 기존에 설치 되어있던 wallet 폴더를 삭제하고, package.json 설치를 진행한다.
+``` cmd
+// 폴더이동
+cd javascript
+// wallet 폴더 삭제
+rm -rf wallet
+// package.json install
+npm install package.json
+// admin 등록
+node enrollAdmin.js
+// user 등록
+node registerUser.js
+// 쿼리 조회
+node query.js
+// 등록 
+node invoke.js
+// 이후 확인 조회
+node query.js 
+```
