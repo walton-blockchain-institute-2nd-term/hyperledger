@@ -57,6 +57,10 @@ source ~/.profile
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:~/fabric-samples/bin
 ```
 
+## 잠깐 Tip!
+## fabcar , comercial-paper 을 이용해서 프로젝트 진행하는 편이 초급 단계에서는 좋음
+## 프로젝트 진행을 할 때에는 기존의 것을 활용해서 하자
+
 # 하이퍼렛저 패브릭 fabcar 실행 명령 순서
 1. 패브릭 설치시 fabric-samples도 설치가 된다. 
 2. cd fabric-samples에 있는 fabcar 폴더로 이동하고, 이 곳에서 startFablic.sh를 실행한다.
