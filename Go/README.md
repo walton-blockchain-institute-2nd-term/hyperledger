@@ -39,6 +39,6 @@ func main() {
 ```
 
 # go build 실행
-## 작성한 후 터미널에서 go build hello.go
-## VS Code 에서는 ctrl + ` 을 눌러 터미널 실행 가능 이후 go build hello.go
-## 그냥 go build 를 해도 진행은 가능하나 폴더명으로 생성된다.
+-  작성한 후 터미널에서 go build hello.go
+-  VS Code 에서는 ctrl + ` 을 눌러 터미널 실행 가능 이후 go build hello.go
+- 그냥 go build 를 해도 진행은 가능하나 폴더명으로 생성된다.
