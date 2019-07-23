@@ -21,7 +21,7 @@ sudo usermod -aG docker $USER
 rebooting
 ```
 
-## Crul , Node.js , Go 설치
+## Curl , Node.js , Go 설치
 ``` cmd
 // curl 설치
 sudo apt-get install curl
