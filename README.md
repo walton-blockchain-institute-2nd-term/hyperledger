@@ -14,7 +14,7 @@
 // docker 설치
 sudo apt install docker.io
 sudo apt install docker-compose
-sudo apt install software-propertise-common
+sudo apt install software-properties-common
 // 사용자 권한 주기
 sudo usermod -aG docker $USER
 // reboot
