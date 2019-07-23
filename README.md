@@ -34,7 +34,7 @@ bash install_nvm.sh
 source ~/.profile
 nvm install v8.11.1
 // Go 설치
-curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd54.tar.gz
+curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd64.tar.gz
 tar -xvf go1.11.2.linux-amd64.tar.gz
 sudo mv go /usr/local
 sudo ln -s /usr/local/go/bin/go /usr/local/bin/go
