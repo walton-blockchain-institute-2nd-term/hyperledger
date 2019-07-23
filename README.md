@@ -73,6 +73,7 @@ source ~/.profile
 1. 패브릭 설치시 fabric-samples도 설치가 된다. 
 2. cd fabric-samples에 있는 fabcar 폴더로 이동하고, 이 곳에서 startFabric.sh를 실행한다.
   ``` cmd
+  // 폴더이동
   cd fabric-samples/fabcar
   ./startFabric.sh
   ```
