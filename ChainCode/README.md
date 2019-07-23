@@ -122,3 +122,37 @@ func main() {
 go get -u "github.com/hyperledger/faabric/core/chaincode/shim"
 go build
 ```
+
+# network 내용 변경
+docker-compose.yml 파일에서 cli 부분에 volume 쪽으로 가면 chaincode 의 위치가 나와있다.
+이 위치가 달라질 경우 해당 경로를 변경해주어야한다. 
+
+```shell
+# chaincode install
+docker exec cli peer chaincode install -n mychaincode -v 1.0 -p github.com/
+
+# chaincode instantiate
+docker exec cli peer chaincode instantiate -n mychaincode -v 1.0 -C mychannel -c '{"Args":["name","hansol"]}' -P 'OR ("Org1MSP.member")'
+sleep 5
+
+# chaincode query name
+docker exec cli peer chaincode query -n mychaincode -C mychannel -c '{"Args":["get","name"]}'
+
+# chaincode invoke FS
+docker exec cli peer chaincode invoke -n mychaincode -C mychannel -c '{"Args":["set","FS","260"]}'
+sleep 5
+
+# chaincode query FS
+docker exec cli peer chaincode query -n mychaincode -C mychannel -c '{"Args":["get","FS"]}'
+```
+
+# docekr 실행
+docker exec cli bash
+```docker
+# upgrade 부분
+peer chaincode list --installed
+peer chaincode install -n mychaincode -v 1.1 -p github.com
+peer chaincode list -- installed
+peer chaincode upgrade -n mychaincode -v 1.1 -C mychannel -c '{"Args":["a","100"]}' -P 'OR ("Org1MSP.member")'
+peer chaincode query -n mychaincode -C mychannel -c '{"Args":["getAllKeys"]}'
+```
