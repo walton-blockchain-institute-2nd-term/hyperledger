@@ -44,9 +44,14 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 source ~/.profile
 ```
+
 ## 파이썬, GIT 설치( 설치가 안되어 있는 경우에만 해당 )
+```
 sudo apt install -y python
 sudo apt install -y git
+또는
+sudo apt install -y python git
+```
 
 ## 하이퍼렛저 패브릭 설치
 ```cmd
