@@ -146,7 +146,7 @@ sleep 5
 docker exec cli peer chaincode query -n mychaincode -C mychannel -c '{"Args":["get","FS"]}'
 ```
 
-# docekr 실행
+# docker 실행
 docker exec cli bash
 ```docker
 # upgrade 부분
