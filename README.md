@@ -35,8 +35,11 @@ source ~/.profile
 nvm install v8.11.1
 // Go 설치
 curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd64.tar.gz
+// 압축 풀기
 tar -xvf go1.11.2.linux-amd64.tar.gz
+// 압축 해제를 통해 얻은 go 디렉토리를 /usr/local 경로로 이동
 sudo mv go /usr/local
+// /usr/local/go/bin/go 디렉토리에 대한 링크(바로가기)를 /usr/local/bin/go에 연결
 sudo ln -s /usr/local/go/bin/go /usr/local/bin/go
 gedit ~/.profile
 // 제일 밑에 추가하는부분
