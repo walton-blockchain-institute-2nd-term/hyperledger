@@ -59,12 +59,11 @@ sudo apt install -y python git
 ```cmd
 sudo curl -sSL http://bit.ly/2ysbOFE | bash -s
 vi ~/.profile
+//아까 추가한 부분 수정
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:~/fabric-samples/bin
 source ~/.profile
 ```
-아까 추가한 부분 수정
-```
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:~/fabric-samples/bin
-```
+
 
 ## 잠깐 Tip!
 ## fabcar , comercial-paper 을 이용해서 프로젝트 진행하는 편이 초급 단계에서는 좋음
