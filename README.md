@@ -49,7 +49,9 @@ source ~/.profile
 ```
 sudo apt install -y python
 sudo apt install -y git
+```
 또는
+```
 sudo apt install -y python git
 ```
 
@@ -58,7 +60,9 @@ sudo apt install -y python git
 sudo curl -sSL http://bit.ly/2ysbOFE | bash -s
 vi ~/.profile
 source ~/.profile
-아까 추가한 부분
+```
+아까 추가한 부분 수정
+```
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:~/fabric-samples/bin
 ```
 
