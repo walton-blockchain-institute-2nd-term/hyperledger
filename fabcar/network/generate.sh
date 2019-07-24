@@ -4,23 +4,11 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# * 아직 공부 중인 학생이 작성한 주석입니다.
-# * 설명에 오류가 많을 수 있습니다.
-#
-# 가장 초기에 실행해야 하는 Shell Script로,
-# 네트워크 구성에 필요한 cryptogen, configtxgen 유틸리티를
-# crypto-config.yaml, configtx.yaml 속성 파일을 가지고 실행하여
-# ./crypto-config, ./config 디렉토리 내부에 각각 생성합니다.
-#
-
-# export: 환경 변수(운영체제 전반에 적용)
 export PATH=$GOPATH/src/github.com/hyperledger/fabric/build/bin:${PWD}/../bin:${PWD}:$PATH
 export FABRIC_CFG_PATH=${PWD}
-# connection.yaml
 CHANNEL_NAME=mychannel
 
 # remove previous crypto material and config transactions
-# config, crypto-config 디렉토리 하위 항목들을 모두 삭제합니다.
 rm -fr config/*
 rm -fr crypto-config/*
 
@@ -40,13 +28,11 @@ if [ "$?" -ne 0 ]; then
   exit 1
 fi
 
-# * 수정 중. 테스트 필요 ###############
-
-# config 디렉토리가 없는 경우 생성합니다.
+#############################
 if [ ! -d "./config" ]; then
     mkdir config
 fi
-######################################
+#############################
 
 # generate genesis block for orderer
 # configtx.yaml 속성 파일 내 정의됨.
