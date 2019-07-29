@@ -23,6 +23,8 @@ fi
 # * GOPATH 경로를 정확하게 알고 나서 안에 ShellScript 분석한 다음 마저 작성
 cryptogen generate --config=./crypto-config.yaml
 # * 마지막 명령 줄 결과가 0이 아닌 경우
+# '$?'란 방금 실행된 스크립트가 반환한 값
+# 반환값이 0이 아닌 경우 (1~255은 에러) echo문 출력
 if [ "$?" -ne 0 ]; then
   echo "Failed to generate crypto material..."
   exit 1
