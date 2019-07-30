@@ -14,6 +14,7 @@ mkdir application
 - crypto-config 폴더
 - configtx.yaml
 - connection.yaml
+- connection.json
 - crypto-config.yaml
 - docker-compose.yml
 - generate.sh
@@ -119,7 +120,7 @@ func main() {
 # 소스코드 작성 이후 go 외부 라이버러리 임포트 
 # ( chaincode 폴더 내부에서 진행되어야 합니다. )
 ```cmd
-go get -u "github.com/hyperledger/faabric/core/chaincode/shim"
+go get -u "github.com/hyperledger/fabric/core/chaincode/shim"
 go build
 ```
 
