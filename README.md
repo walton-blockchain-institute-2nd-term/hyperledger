@@ -18,7 +18,7 @@ sudo apt install software-properties-common
 // 사용자 권한 주기
 sudo usermod -aG docker $USER
 // reboot
-rebooting
+sudo reboot
 ```
 
 ## Curl , Node.js , Go 설치
